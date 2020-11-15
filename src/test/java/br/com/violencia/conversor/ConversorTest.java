@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 public class ConversorTest {
 
     private Conversor conversorTest;
@@ -15,24 +14,13 @@ public class ConversorTest {
 
     @BeforeEach
     public void setUp() {
-        gerandoConversor();
+        conversorTest = new Conversor('C', 10);
     }
 
     @Test
-    public void testConverter() {
-        quandoEstaConvertendoParaKelvin();
-        entaoConverteuTemperatura();
-    }
+    public void testeConvertendoDeCelsiusParaKelvin() {
+        conversorTest.converter('K');
 
-    private void gerandoConversor(){
-        this.conversorTest = new Conversor('C', 10);
-    }
-
-    private void quandoEstaConvertendoParaKelvin(){
-        this.conversorTest.converter('K');
-    }
-
-    private void entaoConverteuTemperatura(){
         assertEquals(conversorTest.getTemp().getEscala(), ESCALA_TEST);
         assertEquals(conversorTest.getTemp().getTemperatura(), TEMP_KELVIN_TEST);
     }
