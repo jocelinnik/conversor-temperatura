@@ -7,15 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConversorTest {
 
-    private Conversor conversorTest;
+    private Conversor conversorTest = new Conversor('C', 10);
 
     public static final char ESCALA_TEST = 'K';
     public static final double TEMP_KELVIN_TEST = 283.00;
-
-    @BeforeEach
-    public void setUp() {
-        conversorTest = new Conversor('C', 10);
-    }
 
     @Test
     public void testeConvertendoDeCelsiusParaKelvin() {
