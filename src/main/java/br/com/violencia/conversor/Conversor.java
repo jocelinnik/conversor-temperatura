@@ -86,7 +86,7 @@ public class Conversor{
      */
     public void fahrenheitParaKelvin(){
         this.fahrenheitParaCelsius();
-        this.celsiusParaFahrenheit();
+        this.celsiusParaKelvin();
     }
 
     public void converter(char escalaParaConverter){
