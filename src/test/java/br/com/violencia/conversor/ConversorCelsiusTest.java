@@ -19,7 +19,7 @@ public class ConversorCelsiusTest {
         conversorTest.converter('K');
 
         assertEquals(conversorTest.getTemp().getEscala(), 'K');
-        assertEquals(conversorTest.getTemp().getTemperatura(), 283.00);
+        assertEquals(conversorTest.getTemp().getTemperatura(), 0.00);
     }
 
     @Test
